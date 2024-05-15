@@ -4,17 +4,12 @@ function clickLoadMore() {
     button.textContent.includes('\n            Load more…\n          ')
   );
 
-  if (loadMoreButtons.length === 0) {
-    clearInterval(interval);
-    return;
-  } else {
+  if (loadMoreButtons.length > 0) {
     loadMoreButtons.forEach((button) => {
-      if (button.textContent.includes('\n            Load more…\n          ')) {
-        button.click();
-      }
+      button.click();
     });
   }
 }
 
-// Run the function every 2 seconds to ensure all "Load more" buttons are clicked
-const interval = setInterval(clickLoadMore, 2000);
+// Run the function every 1 seconds to ensure all "Load more" buttons are clicked
+setInterval(clickLoadMore, 1000);
