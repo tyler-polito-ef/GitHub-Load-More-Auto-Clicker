@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Load More Auto Clicker",
+  "version": "1.0",
+  "description": "Automatically clicks 'Load more' links on GitHub pull request pages.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/pull/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
