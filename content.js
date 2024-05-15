@@ -1,8 +1,9 @@
 function clickLoadMore() {
   const submitButtons = document.querySelectorAll('button[type="submit"]');
-  const loadMoreButtons = Array.from(submitButtons).filter((button) =>
-    button.textContent.includes('\n            Load more…\n          ')
-  );
+  const loadMoreButtons = Array.from(submitButtons).filter((button) => {
+    const buttonText = button.textContent.trim();
+    return buttonText === 'Load more…';
+  });
 
   if (loadMoreButtons.length > 0) {
     loadMoreButtons.forEach((button) => {
