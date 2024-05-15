@@ -1,4 +1,8 @@
-# Install
+# What it does
+
+With the coming of vercel came the coming of _far too many_ comments on every PR. This extension simply checkes every second at urls that match `"https://github.com/*/pull/*"` and clicks on all "Load more..." buttons if they exist. I haven't noticed any performace issue since having Chat GPT whip it up on PR's.
+
+## Install
 1. Clone repo
 2. Go to [Chrome extensions](chrome://extensions/)
 3. Enable "Developer mode" in the top right of the screen
